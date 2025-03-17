@@ -98,6 +98,7 @@ function showStep(step) {
 
 function save() {
     let message = $('#message').val();
+
     payload['arguments'].execute.inArguments = [{
         "message": message,
         "emailAddress": "{{Contact.Attribute.CustomDE.EmailAddress}}"
@@ -107,6 +108,7 @@ function save() {
 
     connection.trigger('updateActivity', payload);
 }
+
 function onGetTokens(tokens) {
     // Stockage des tokens si nécessaire
     console.log(tokens);

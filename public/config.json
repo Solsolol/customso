@@ -1,7 +1,7 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-        "icon": "images/salesforce.png",
+        "icon": "images/icon.png",
         "category": "custom"
     },
     "type": "REST",
@@ -11,7 +11,7 @@
             "description": "Description de mon activité personnalisée"
         },
         "en-US": {
-            "name": "My Custom Activity So",
+            "name": "My Custom Activity",
             "description": "Description of my custom activity"
         }
     },
@@ -21,7 +21,7 @@
                 { "emailAddress": "{{Contact.Attribute.CustomDE.EmailAddress}}" }
             ],
             "outArguments": [],
-            "url": "https://customso-c29733dba204.herokuapp.com/activity/execute",
+            "url": "https://votre-app.herokuapp.com/activity/execute",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -32,17 +32,17 @@
     },
     "configurationArguments": {
         "save": {
-            "url": "https://customso-c29733dba204.herokuapp.com/activity/save",
+            "url": "https://votre-app.herokuapp.com/activity/save",
             "verb": "POST",
             "useJwt": true
         },
         "validate": {
-            "url": "https://customso-c29733dba204.herokuapp.com/activity/validate",
+            "url": "https://votre-app.herokuapp.com/activity/validate",
             "verb": "POST",
             "useJwt": true
         },
         "publish": {
-            "url": "https://customso-c29733dba204.herokuapp.com/activity/publish",
+            "url": "https://votre-app.herokuapp.com/activity/publish",
             "verb": "POST",
             "useJwt": true
         }
