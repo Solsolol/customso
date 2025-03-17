@@ -21,7 +21,7 @@
                 { "emailAddress": "{{Contact.Attribute.CustomDE.EmailAddress}}" }
             ],
             "outArguments": [],
-            "url": "https://customso-c29733dba204.herokuapp.com/activity/execute",
+            "url": "https://customso-b864eec87d43.herokuapp.com/activity/execute",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -32,17 +32,17 @@
     },
     "configurationArguments": {
         "save": {
-            "url": "https://customso-c29733dba204.herokuapp.com/activity/save",
+            "url": "https://customso-b864eec87d43.herokuapp.com/activity/save",
             "verb": "POST",
             "useJwt": true
         },
         "validate": {
-            "url": "https://customso-c29733dba204.herokuapp.com/activity/validate",
+            "url": "https://customso-b864eec87d43.herokuapp.com/activity/validate",
             "verb": "POST",
             "useJwt": true
         },
         "publish": {
-            "url": "https://customso-c29733dba204.herokuapp.com/activity/publish",
+            "url": "https://customso-b864eec87d43.herokuapp.com/activity/publish",
             "verb": "POST",
             "useJwt": true
         }
