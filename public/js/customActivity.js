@@ -4,7 +4,7 @@ let connection = new Postmonger.Session();
 let payload = {};
 let steps = {};
 let currentStep = null;
-let activityKey = 'f34a7ae9-ab91-4fd2-a0ec-72a0d7a1987b';
+let activityKey = '6a9915f4-2da3-493e-a7d1-2ca30954b860';
 
 $(window).ready(onRender);
 
