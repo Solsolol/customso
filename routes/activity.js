@@ -1,31 +1,33 @@
 const express = require('express');
 const router = express.Router();
 
-// Endpoint pour la sauvegarde de l'activité
 router.post('/save', (req, res) => {
-    console.log('Données de sauvegarde:', req.body);
+    console.log('Données sauvegardées:', req.body);
     res.status(200).json({ success: true });
 });
 
-// Endpoint pour la validation
 router.post('/validate', (req, res) => {
-    console.log('Données de validation:', req.body);
+    console.log('Validation en cours:', req.body);
     res.status(200).json({ success: true });
 });
 
-// Endpoint pour la publication
 router.post('/publish', (req, res) => {
-    console.log('Données de publication:', req.body);
+    console.log('Publication de l'activité:', req.body);
     res.status(200).json({ success: true });
 });
 
-// Endpoint pour l'exécution
 router.post('/execute', (req, res) => {
-    console.log('Données d\'exécution:', req.body);
+    console.log('Exécution de l'activité:', req.body);
     
-    // Implémentez ici votre logique métier
+    // Implémentation de l'intégration avec Sophia API
+    const requestData = {
+        clientId: 'ataf650dw2v0b5oh4s2sgh7h',
+        clientSecret: 'rJhQKbQWwETW7iCR8oMKu0aD',
+        data: req.body.inArguments
+    };
     
-    res.status(200).json({ success: true });
+    console.log('Données envoyées à Sophia API:', requestData);
+    res.status(200).json({ success: true, message: "Requête envoyée à Sophia API" });
 });
 
 module.exports = router;
