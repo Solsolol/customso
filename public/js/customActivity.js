@@ -4,7 +4,7 @@ let connection = new Postmonger.Session();
 let payload = {};
 let steps = {};
 let currentStep = null;
-let activityKey = 'MY_CUSTOM_ACTIVITY';
+let activityKey = 'f34a7ae9-ab91-4fd2-a0ec-72a0d7a1987b';
 
 $(window).ready(onRender);
 
@@ -98,6 +98,7 @@ function showStep(step) {
 
 function save() {
     let message = $('#message').val();
+
     payload['arguments'].execute.inArguments = [{
         "message": message,
         "emailAddress": "{{Contact.Attribute.CustomDE.EmailAddress}}"
@@ -107,6 +108,7 @@ function save() {
 
     connection.trigger('updateActivity', payload);
 }
+
 function onGetTokens(tokens) {
     // Stockage des tokens si nécessaire
     console.log(tokens);

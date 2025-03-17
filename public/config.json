@@ -1,17 +1,17 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-        "icon": "images/salesforce.png",
+        "icon": "images/icon.png",
         "category": "custom"
     },
     "type": "REST",
     "lang": {
         "fr-FR": {
-            "name": "Mon Activité Personnalisée",
+            "name": "Sophia API",
             "description": "Description de mon activité personnalisée"
         },
         "en-US": {
-            "name": "My Custom Activity So",
+            "name": "Sophia API",
             "description": "Description of my custom activity"
         }
     },
@@ -37,7 +37,7 @@
             "useJwt": true
         },
         "validate": {
-            "url": "https://customso-c29733dba204.herokuapp.com/activity/validate",
+            "url": "https://customso-c29733dba204.herokuapp.com/validate",
             "verb": "POST",
             "useJwt": true
         },
