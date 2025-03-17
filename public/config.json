@@ -7,27 +7,20 @@
     "type": "REST",
     "lang": {
         "fr-FR": {
-            "name": "Mon Activité Personnalisée",
-            "description": "Description de mon activité personnalisée"
-        },
-        "en-US": {
-            "name": "My Custom Activity",
-            "description": "Description of my custom activity"
+            "name": "Customso",
+            "description": "Activité personnalisée intégrée à Sophia API"
         }
     },
     "arguments": {
         "execute": {
             "inArguments": [
-                { "emailAddress": "{{Contact.Attribute.CustomDE.EmailAddress}}" }
+                { "email": "{{Contact.Attribute.CustomDE.Email}}" }
             ],
             "outArguments": [],
             "url": "https://customso-c29733dba204.herokuapp.com/activity/execute",
             "verb": "POST",
-            "body": "",
-            "header": "",
             "format": "json",
-            "useJwt": true,
-            "timeout": 10000
+            "useJwt": true
         }
     },
     "configurationArguments": {
@@ -37,7 +30,7 @@
             "useJwt": true
         },
         "validate": {
-            "url": "https://customso-c29733dba204.herokuapp.com/validate",
+            "url": "https://customso-c29733dba204.herokuapp.com/activity/validate",
             "verb": "POST",
             "useJwt": true
         },
@@ -45,21 +38,6 @@
             "url": "https://customso-c29733dba204.herokuapp.com/activity/publish",
             "verb": "POST",
             "useJwt": true
-        }
-    },
-    "userInterfaces": {
-        "configModal": {
-            "height": 400,
-            "width": 600,
-            "fullscreen": false
-        }
-    },
-    "schema": {
-        "arguments": {
-            "execute": {
-                "inArguments": [],
-                "outArguments": []
-            }
         }
     }
 }
